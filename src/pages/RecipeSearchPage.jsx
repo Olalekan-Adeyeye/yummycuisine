@@ -19,7 +19,7 @@ const RecipeSearchpage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(searchValue)
+    console.log(searchValue);
     setMeal([]);
     fetchMeals(
       `https://www.themealdb.com/api/json/v1/1/search.php?s=${sessionSearchValue}`
@@ -51,16 +51,19 @@ const RecipeSearchpage = () => {
           handleChange={handleChange}
           value={searchValue}
         />
-        {loading ? <Loading /> : err ? <Error err={err} show = {false}/> : null}
-        {meal.length > 0 && (
+        {loading ? (
+          <Loading />
+        ) : err ? (
+          <Error err={err} show={false} />
+        ) : (
           <div className="food-container">
-            <h3>Search Results</h3>
+            <h3 style={{ display: meal.length ? "block" : "none" }}>Search Results</h3>
             <div className="food-card-container">
-              {meal.map(({idMeal, strMeal, strMealThumb}) => {
+              {meal.map(({ idMeal, strMeal, strMealThumb }) => {
                 return (
                   <FoodCard
                     key={idMeal}
-                    route='recipe'
+                    route="recipe"
                     id={idMeal}
                     name={strMeal}
                     img={strMealThumb}

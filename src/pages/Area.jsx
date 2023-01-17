@@ -31,15 +31,15 @@ const Area = () => {
       });
   }, []);
 
-  // useEffect(() => {
-  //   window.addEventListener("beforeunload", clearSessionStorage);
-  //   return () => {
-  //     window.removeEventListener("beforeunload", clearSessionStorage);
-  //   };
-  // }, []);
-  // const clearSessionStorage = () => {
-  //   sessionStorage.removeItem("area");
-  // };
+  useEffect(() => {
+    window.addEventListener("beforeunload", clearSessionStorage);
+    return () => {
+      window.removeEventListener("beforeunload", clearSessionStorage);
+    };
+  }, []);
+  const clearSessionStorage = () => {
+    sessionStorage.removeItem("area");
+  };
 
   document.title = "Yummy Cuisine | Area";
 

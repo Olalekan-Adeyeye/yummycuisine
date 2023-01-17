@@ -1,12 +1,11 @@
 .food-card {
   margin-top: 2em;
-  display: block;
+  display: grid;
   width: 100%;
   min-height: 320px;
   max-height: 400px;
   box-shadow: 0px 0px 10px 1px rgba(128, 128, 128, 0.1);
   border-radius: 10px;
-  /* background-color: red; */
 }
 
 .food-card img {

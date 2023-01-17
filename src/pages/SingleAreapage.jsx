@@ -36,33 +36,30 @@ const SingleAreaPage = () => {
 
   return (
     <PagePanel>
-      {loading ? (
-        <Loading />
-      ) : err ? (
-        <Error err={err} />
-      ) : (
-        <main className="recipe-search">
-          {loading ? <Loading /> : err ? <Error err={err} /> : null}
-          {data.length > 0 && (
-            <div className="food-container">
-              <h3>{id} Food Categories</h3>
-              <div className="food-card-container">
-                {data.map(({ idMeal, strMeal, strMealThumb }) => {
-                  return (
-                    <FoodCard
-                      key={idMeal}
-                      route="recipe"
-                      id={idMeal}
-                      name={strMeal}
-                      img={strMealThumb}
-                    />
-                  );
-                })}
-              </div>
+      <main className="recipe-search">
+        {loading ? (
+          <Loading />
+        ) : err ? (
+          <Error err={err} />
+        ) : (
+          <div className="food-container">
+            <h3>{id} Food Categories</h3>
+            <div className="food-card-container">
+              {data.map(({ idMeal, strMeal, strMealThumb }) => {
+                return (
+                  <FoodCard
+                    key={idMeal}
+                    route="recipe"
+                    id={idMeal}
+                    name={strMeal}
+                    img={strMealThumb}
+                  />
+                );
+              })}
             </div>
-          )}
-        </main>
-      )}
+          </div>
+        )}
+      </main>
     </PagePanel>
   );
 };

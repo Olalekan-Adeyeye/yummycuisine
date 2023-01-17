@@ -44,13 +44,16 @@ const Categories = () => {
     sessionStorage.removeItem("category");
   };
 
-  document.title = 'Yummy Cuisine | Categories'
+  document.title = "Yummy Cuisine | Categories";
 
   return (
     <PagePanel>
       <main className="recipe-search">
-        {loading ? <Loading /> : err ? <Error err={err} /> : null}
-        {meal.length > 0 && (
+        {loading ? (
+          <Loading />
+        ) : err ? (
+          <Error err={err} />
+        ) : (
           <div className="food-container">
             <h3>Foods Categories</h3>
             <div className="food-card-container">
@@ -58,7 +61,7 @@ const Categories = () => {
                 return (
                   <FoodCard
                     key={idCategory}
-                    route = 'categories'
+                    route="categories"
                     id={strCategory}
                     name={strCategory}
                     img={strCategoryThumb}

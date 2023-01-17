@@ -7,6 +7,7 @@ import SingleRecipePage from "./pages/SingleRecipePage";
 import Error from "./pages/Error";
 import Area from './pages/Area'
 import SingleAreaPage from "./pages/SingleAreapage";
+import './App.css'
 
 function App() {
   return (

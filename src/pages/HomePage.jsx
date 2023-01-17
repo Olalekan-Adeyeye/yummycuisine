@@ -15,7 +15,7 @@ const Homepage = () => {
     <PagePanel>
       <main className="hero-section">
         <div className="container">
-          <h1>your favourite<br/>dishes broken<br/>down into<br/>recipes</h1>
+          <h1>your favourite dishes<br/>broken down into<br/>recipes</h1>
           <Link to="/recipe/search" className="search-food-btn" onClick={onRefresh}>
             Search Food!
           </Link>
