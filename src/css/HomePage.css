@@ -1,0 +1,54 @@
+.hero-section {
+  background-image: url("../assets/top-view-table-full-delicious-food-composition.jpg");
+  background-color: rgba(167, 114, 114, 0.9);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+h1 {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  font-size: 3rem;
+  text-transform: capitalize;
+  margin-bottom: 1em;
+}
+
+.search-bar{
+  margin-bottom: 1em;
+}
+
+.search-food-btn{
+  display: block;
+  padding: 1em 2em;
+  color: white;
+  width: 20%;
+  background-color: red;
+  border: none;
+  border-radius: 50px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 200px;
+}
+
+.search-food-btn:hover{
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.search-food-btn:active{
+  background-color: red;
+}

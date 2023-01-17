@@ -1,0 +1,67 @@
+.food-container {
+  margin: 0 auto;
+  margin-top: 0em;
+  margin-bottom: 2em;
+}
+
+.food-card-container {
+  grid-template-columns: repeat(auto-fit, minmax(30%, 30%));
+}
+
+.food-container h3 {
+  font-weight: 400;
+  width: fit-content;
+  padding-bottom: .5em;
+  border-bottom: 2px solid red;
+}
+
+@media screen and (max-width: 659px) {
+  .food-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 660px) and (max-width: 977px) {
+  .food-card-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(45%, 45%));
+    /* grid-template-rows: auto; */
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1em;
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+  }
+}
+
+@media screen and (min-width: 978px) and (max-width: 1399px) {
+  .food-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(30%, 30%));
+    /* grid-template-rows: auto; */
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1em;
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .food-card-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(20%, 22%));
+    /* grid-template-rows: auto; */
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1em;
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+  }
+}

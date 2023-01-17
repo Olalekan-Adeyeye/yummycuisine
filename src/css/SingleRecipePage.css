@@ -1,0 +1,134 @@
+.recipe-container {
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 2em;
+}
+
+.recipe-head {
+  margin-bottom: 0.5em;
+}
+
+.recipe button {
+  padding: 1em 1.5em;
+  margin-right: 1em;
+}
+
+.tag{
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+  padding: 10px;
+  background-color: red;
+  color: white;
+}
+
+.recipe h3 {
+  margin-bottom: 1em;
+  font-weight: 500;
+}
+
+.recipe-image {
+  position: relative;
+  width: 100%;
+}
+
+.recipe-image img {
+  object-fit: cover;
+  height: 400px;
+  width: 100%;
+}
+
+.recipe-category {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.recipe-category button:hover{
+    background-color: rgba(255, 0, 0, 1);
+    color: white;
+}
+
+.recipe-category button {
+  font-weight: 500;
+}
+
+ul {
+  list-style-position: inside;
+  list-style-type: circle;
+}
+
+.recipe-ingredient {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+
+.recipe-ingredient-wrapper {
+  width: 40%;
+}
+
+.recipe-ingredients-instructions{
+ width: 55%;
+}
+
+.recipe-ingredient-flex,
+.recipe-ingredients-instructions,
+.recipe-ingredient-source {
+  padding: 2em;
+  background-color: rgba(128, 128, 128, 0.1);
+}
+
+.recipe-ingredient-source {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.recipe-ingredient-source a {
+  color: red;
+}
+
+.recipe-ingredient li,
+.recipe-ingredient p {
+  line-height: 1.7;
+}
+
+.recipe-ingredient-list ul li {
+  margin-right: 2em;
+}
+
+.flex {
+  display: flex;
+}
+
+.recipe-video {
+  box-shadow: 0px 0px 20px 2px rgba(128, 128, 128, 0.1);
+  /* background-color: rgba(255, 0, 0, 0.1); */
+  margin-bottom: 2em;
+  padding: 2em;
+}
+
+.recipe-video iframe {
+  width: 100%;
+  height: 400px;
+}
+
+@media screen and (max-width: 1024px) {
+  .recipe-ingredient {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 2em;
+  }
+
+  .recipe-ingredient-wrapper,
+  .recipe-ingredients-instructions {
+    width: 100%;
+  }
+
+  .recipe-ingredients-instructions {
+    margin-top: 1em;
+  }
+}

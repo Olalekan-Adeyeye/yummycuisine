@@ -1,0 +1,49 @@
+.err {
+  /* background-color: red; */
+  text-align: center;
+  margin-top: 2em;
+}
+
+.error-page {
+  display: grid;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-page div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.error-page div p{
+  line-height: 1.7;
+  text-align: center;
+}
+
+.error-page div img{
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+
+}
+
+.reload {
+  display: block;
+  padding: 1em 3em;
+  color: white;
+  background-color: red;
+  border: none;
+  border-radius: 50px;
+  margin: 0 auto;
+  margin-top: 1em;
+}
+
+.reload:hover {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.reload:active {
+  background-color: red;
+}

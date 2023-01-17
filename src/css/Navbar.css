@@ -1,0 +1,53 @@
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav-link {
+  margin: 0px 0.5em;
+}
+
+nav a {
+  display: block;
+  padding-bottom: 0.25em;
+  margin: 0px 3rem;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+nav a:hover {
+  color: red;
+}
+
+.active {
+  border-bottom: 1px solid grey;
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    position: fixed;
+    background-color: rgba(243, 243, 243, 1);
+    top: 50px;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+  }
+  .nav-link-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .nav a {
+    display: block;
+    margin: 0 auto;
+    margin-top: 1em;
+    padding: 0.5em 0em;
+    width: fit-content;
+    color: black;
+  }
+
+  .nav-link:active{
+    color: blue;
+  }
+}

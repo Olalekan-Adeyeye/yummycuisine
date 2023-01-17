@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Rubik, "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+a {
+  /* font-weight: 500; */
+  color: black;
+  text-decoration: inherit;
+}
+
+/* a:hover{
+  border: 2px solid dashed;
+} */

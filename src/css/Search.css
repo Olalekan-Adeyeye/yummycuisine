@@ -1,0 +1,39 @@
+form {
+  margin: 0 auto;
+  margin-bottom: 2em;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 5px;
+}
+
+.search-input,
+button {
+  padding: 1.25em 0.75em;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.search-input {
+  width: 70%;
+  background-color: whitesmoke;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+form button {
+  color: white;
+  width: 30%;
+  background-color: red;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+form button:hover {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+form button:active {
+  background-color: red;
+}
