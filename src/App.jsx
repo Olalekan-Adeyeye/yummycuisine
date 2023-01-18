@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Homepage from "./pages/homepage";
-import Categories from "./pages/categories";
+import Homepage from "./pages/HomePage";
+import Categories from "./pages/Categories";
 import SingleCategoryPage from "./pages/SingleCategoryPage";
-import RecipePage from "./pages/recipeSearchPage";
+import RecipePage from "./pages/RecipeSearchPage";
 import SingleRecipePage from "./pages/SingleRecipePage";
-import Error from "./pages/error";
-import Area from "./pages/area";
+import Error from "./pages/Error";
+import Area from "./pages/Area";
 import SingleAreaPage from "./pages/SingleAreapage";
 import "./App.css";
 
