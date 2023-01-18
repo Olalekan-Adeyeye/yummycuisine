@@ -1,13 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Homepage from "./pages/Homepage";
-import Categories from "./pages/Categories";
+import Homepage from "./pages/homepage";
+import Categories from "./pages/categories";
 import SingleCategoryPage from "./pages/SingleCategoryPage";
-import RecipePage from "./pages/RecipeSearchPage";
+import RecipePage from "./pages/recipeSearchPage";
 import SingleRecipePage from "./pages/SingleRecipePage";
-import Error from "./pages/Error";
-import Area from './pages/Area'
+import Error from "./pages/error";
+import Area from "./pages/area";
 import SingleAreaPage from "./pages/SingleAreapage";
-import './App.css'
+import "./App.css";
 
 function App() {
   return (
@@ -16,11 +16,11 @@ function App() {
         <Route index element={<Homepage />} />
         <Route path="categories" element={<Categories />} />
         <Route path="area" element={<Area />} />
-        <Route path="area/:id" element={<SingleAreaPage/>} />
+        <Route path="area/:id" element={<SingleAreaPage />} />
         <Route path="categories/:id" element={<SingleCategoryPage />} />
         <Route path="recipe/search" element={<RecipePage />} />
         <Route path="recipe/:id" element={<SingleRecipePage />} />
-        <Route path="*" element={<Error/>} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
   );
