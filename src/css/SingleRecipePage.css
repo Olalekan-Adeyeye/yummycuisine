@@ -14,7 +14,7 @@
   margin-right: 1em;
 }
 
-.tag{
+.tag {
   position: absolute;
   bottom: 5px;
   right: 0;
@@ -37,6 +37,7 @@
   object-fit: cover;
   height: 400px;
   width: 100%;
+  max-width: 100%;
 }
 
 .recipe-category {
@@ -44,9 +45,9 @@
   margin-bottom: 1em;
 }
 
-.recipe-category button:hover{
-    background-color: rgba(255, 0, 0, 1);
-    color: white;
+.recipe-category button:hover {
+  background-color: rgba(255, 0, 0, 1);
+  color: white;
 }
 
 .recipe-category button {
@@ -69,8 +70,8 @@ ul {
   width: 40%;
 }
 
-.recipe-ingredients-instructions{
- width: 55%;
+.recipe-ingredients-instructions {
+  width: 55%;
 }
 
 .recipe-ingredient-flex,
@@ -87,6 +88,7 @@ ul {
 
 .recipe-ingredient-source a {
   color: red;
+  word-wrap: break-word;
 }
 
 .recipe-ingredient li,
