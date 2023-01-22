@@ -41,7 +41,6 @@ h3 a span {
   opacity: 0;
   cursor: pointer;
   z-index: 1000;
-  background-color: red;
 }
 
 .menu,
