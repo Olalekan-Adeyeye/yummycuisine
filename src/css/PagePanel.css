@@ -1,6 +1,6 @@
 .grid {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
-  grid-template-rows: 54px 1fr;
   background-color: rgba(243, 243, 243, 0.1);
 }

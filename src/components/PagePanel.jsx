@@ -6,7 +6,6 @@ const PagePanel = ({ children }) => {
   return (
     <div className="grid">
       <Header />
-      <div className="grid-row-54px"></div>
       {children}
     </div>
   );
