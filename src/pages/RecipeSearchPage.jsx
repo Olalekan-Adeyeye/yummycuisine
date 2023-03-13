@@ -6,11 +6,10 @@ import PagePanel from "../components/PagePanel";
 import Search from "../components/Search";
 import "../css/RecipeSearchPage.css";
 import "../css/Foods.css";
-import useMealFetcher from "../functions/useMealFetcher";
+import useMealFetcher from "../hooks/useMealFetcher";
 
 const RecipeSearchpage = () => {
-  const sessionSearchValue = sessionStorage.getItem("searchItem");
-  const [searchValue, setSearchValue] = useState(sessionSearchValue || "");
+  const [searchValue, setSearchValue] = useState("");
   const [meal, setMeal, loading, err, fetchMeals] = useMealFetcher();
 
   const handleChange = (e) => {
@@ -22,23 +21,8 @@ const RecipeSearchpage = () => {
     console.log(searchValue);
     setMeal([]);
     fetchMeals(
-      `https://www.themealdb.com/api/json/v1/1/search.php?s=${sessionSearchValue}`
+      `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchValue}`
     );
-  };
-
-  useEffect(() => {
-    sessionStorage.setItem("searchItem", searchValue);
-  }, [searchValue]);
-
-  useEffect(() => {
-    window.addEventListener("beforeunload", clearSessionStorage);
-    return () => {
-      window.removeEventListener("beforeunload", clearSessionStorage);
-    };
-  }, []);
-  const clearSessionStorage = () => {
-    sessionStorage.removeItem("searchItem");
-    sessionStorage.removeItem("data");
   };
 
   document.title = `Yummy Cuisine | Recipe-Search`;
@@ -57,7 +41,9 @@ const RecipeSearchpage = () => {
           <Error err={err} show={false} />
         ) : (
           <div className="food-container">
-            <h3 style={{ display: meal.length ? "block" : "none" }}>Search Results</h3>
+            <h3 style={{ display: meal.length ? "block" : "none" }}>
+              Search Results
+            </h3>
             <div className="food-card-container">
               {meal.map(({ idMeal, strMeal, strMealThumb }) => {
                 return (
