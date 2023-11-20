@@ -11,7 +11,7 @@
 .food-container h3 {
   font-weight: 400;
   width: fit-content;
-  padding-bottom: .5em;
+  padding-bottom: 0.5em;
   border-bottom: 2px solid red;
 }
 
@@ -38,7 +38,7 @@
   }
 }
 
-@media screen and (min-width: 978px) and (max-width: 1399px) {
+@media screen and (min-width: 978px) and (max-width: 1439px) {
   .food-card-container {
     display: grid;
     grid-template-columns: repeat(3, minmax(30%, 30%));
