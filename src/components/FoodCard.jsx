@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "../css/FoodCard.css";
-import { FaArrowAltCircleLeft, FaBars } from "react-icons/fa";
+import { FaArrowAltCircleLeft} from "react-icons/fa";
 
-const FoodCard = (props) => {
+const FoodCard = ({route, id, img, name}) => {
   return (
-    <Link to={`/${props.route}/${props.id}`} className="food-card">
-      {props.img && <img src={props.img} alt="meal pic" />}
+    <Link to={`/${route}/${id}`} className="food-card">
+      {img && <img src={img} alt="meal pic" />}
       <div className="name-fave">
-        <p>{props.name}</p>
+        <p>{name}</p>
         <FaArrowAltCircleLeft style={{ color: "red" }} />
       </div>
     </Link>
